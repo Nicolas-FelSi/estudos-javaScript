@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td, th {
+            padding: 8px 16px;
+        }
+    </style>
+</head>
+<body>
+    <table border>
+        <thead>
+            <tr>
+                <th>Dom</th>
+                <th>Seg</th>
+                <th>Ter</th>
+                <th>Qua</th>
+                <th>Qui</th>
+                <th>Sex</th>
+                <th>Sab</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="dias">1</td>
+                <td class="dias">2</td>
+                <td class="dias">3</td>
+                <td class="dias">4</td>
+                <td class="dias">5</td>
+            </tr>
+            <tr>
+                <td class="dias">6</td>
+                <td class="dias">7</td>
+                <td class="dias">8</td>
+                <td class="dias">9</td>
+                <td class="dias">10</td>
+                <td class="dias">11</td>
+                <td class="dias">12</td>
+            </tr>
+            <tr>
+                <td class="dias">13</td>
+                <td class="dias">14</td>
+                <td class="dias">15</td>
+                <td class="dias">16</td>
+                <td class="dias">17</td>
+                <td class="dias">18</td>
+                <td class="dias">19</td>
+            </tr>
+            <tr>
+                <td class="dias">20</td>
+                <td class="dias">21</td>
+                <td class="dias">22</td>
+                <td class="dias">23</td>
+                <td class="dias">24</td>
+                <td class="dias">25</td>
+                <td class="dias">26</td>
+            </tr>
+            <tr>
+                <td class="dias">27</td>
+                <td class="dias">28</td>
+                <td class="dias">29</td>
+                <td class="dias">30</td>
+                <td class="dias">31</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <form>
+        <label for="dataId1">Data: </label>
+        <input type="date" id="dataId1">
+        <br>
+        <label for="dataId2">Data: </label>
+        <input type="date" id="dataId2">
+        <br>
+        <button type="button" id="mostrarDia">Mostrar Dia</button>
+        <button type="button" id="calcularDia">Calcular Dias</button>
+    </form>
+    <p id="entreDias"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
