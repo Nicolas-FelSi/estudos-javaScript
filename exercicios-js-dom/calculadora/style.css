@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "Calculator";
+    src: url("./Calculator.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #F1F3F6;
+    border: none;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #D1DDE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+    background-color: #141518;
+    width: 375px;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.tela {
+    font-family: "Calculator";
+    margin: 2rem 0 3rem 0;
+    padding: .5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 10px black;
+}
+
+.tela-menor {
+    background-color: #202515;
+    padding: .25rem;
+    border-radius: 8px;
+    border: 1px solid #1565C0;
+}
+
+.tela-menor p {
+    color: #f1f3f617;
+    font-size: 72px;
+    letter-spacing: 4px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 16px;
+    grid-template-areas: 
+    "ac     del    parEsq parDir"
+    "sqrt   poten  porcen div"
+    "sete   oito   nove   mult"
+    "quatro cinco  seis   menos"
+    "um     dois   tres   mais"
+    "zero   zero   ponto  igual";
+}
+
+.buttons button {
+    font-size: 20px;
+    background-color: #141518;
+    box-shadow: 2px 2px 10px black;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buttons button:active {
+    box-shadow: inset .5px .5px 2px black;
+}
+
+button[data-value="ac"] {
+    grid-area: ac;    
+}
+
+button[data-value="del"] {
+    grid-area: del;    
+}
+
+button[data-value="%"] {
+    grid-area: porcen;    
+}
+
+button[data-value="/"] {
+    grid-area: div;    
+}
+
+button[data-value="7"] {
+    grid-area: sete;    
+}
+
+button[data-value="8"] {
+    grid-area: oito;    
+}
+
+button[data-value="9"] {
+    grid-area: nove;    
+}
+
+button[data-value="*"] {
+    grid-area: mult;    
+}
+
+button[data-value="4"] {
+    grid-area: quatro;    
+}
+
+button[data-value="5"] {
+    grid-area: cinco;    
+}
+
+button[data-value="6"] {
+    grid-area: seis;    
+}
+
+button[data-value="-"] {
+    grid-area: menos;    
+}
+
+button[data-value="1"] {
+    grid-area: um;    
+}
+
+button[data-value="2"] {
+    grid-area: dois;    
+}
+
+button[data-value="3"] {
+    grid-area: tres;    
+}
+
+button[data-value="+"] {
+    grid-area: mais;    
+}
+
+button[data-value="0"] {
+    grid-area: zero;   
+}
+
+button[data-value="."] {
+    grid-area: ponto;    
+}
+
+button[data-value="="] {
+    grid-area: igual;    
+}
