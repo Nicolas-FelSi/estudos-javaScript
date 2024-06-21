@@ -41,14 +41,17 @@ body {
 .tela-menor {
     background-color: #202515;
     padding: .25rem;
+    height: 80px;
     border-radius: 8px;
     border: 1px solid #1565C0;
+    overflow: auto;
 }
 
 .tela-menor p {
-    color: #f1f3f617;
-    font-size: 72px;
+    color: #f1f3f69f;
+    font-size: 56px;
     letter-spacing: 4px;
+    text-align: right;
 }
 
 .buttons {
@@ -57,12 +60,11 @@ body {
     grid-template-rows: repeat(5, 1fr);
     gap: 16px;
     grid-template-areas: 
-    "ac     del    parEsq parDir"
-    "sqrt   poten  porcen div"
-    "sete   oito   nove   mult"
-    "quatro cinco  seis   menos"
-    "um     dois   tres   mais"
-    "zero   zero   ponto  igual";
+    "ac     del    parEsq parDir "
+    "sete   oito   nove   div "
+    "quatro cinco  seis   mult "
+    "um     dois   tres   menos "
+    "zero   ponto  igual  mais"
 }
 
 .buttons button {
@@ -78,78 +80,82 @@ body {
     box-shadow: inset .5px .5px 2px black;
 }
 
-button[data-value="ac"] {
+button[value="ac"] {
     grid-area: ac;    
 }
 
-button[data-value="del"] {
+button[value="del"] {
     grid-area: del;    
 }
 
-button[data-value="%"] {
-    grid-area: porcen;    
+button[value="("] {
+    grid-area: parEsq;    
 }
 
-button[data-value="/"] {
+button[value=")"] {
+    grid-area: parDir;    
+}
+
+button[value="/"] {
     grid-area: div;    
 }
 
-button[data-value="7"] {
+button[value="7"] {
     grid-area: sete;    
 }
 
-button[data-value="8"] {
+button[value="8"] {
     grid-area: oito;    
 }
 
-button[data-value="9"] {
+button[value="9"] {
     grid-area: nove;    
 }
 
-button[data-value="*"] {
+button[value="*"] {
     grid-area: mult;    
 }
 
-button[data-value="4"] {
+button[value="4"] {
     grid-area: quatro;    
 }
 
-button[data-value="5"] {
+button[value="5"] {
     grid-area: cinco;    
 }
 
-button[data-value="6"] {
+button[value="6"] {
     grid-area: seis;    
 }
 
-button[data-value="-"] {
+button[value="-"] {
     grid-area: menos;    
 }
 
-button[data-value="1"] {
+button[value="1"] {
     grid-area: um;    
 }
 
-button[data-value="2"] {
+button[value="2"] {
     grid-area: dois;    
 }
 
-button[data-value="3"] {
+button[value="3"] {
     grid-area: tres;    
 }
 
-button[data-value="+"] {
+button[value="+"] {
     grid-area: mais;    
 }
 
-button[data-value="0"] {
+button[value="0"] {
     grid-area: zero;   
 }
 
-button[data-value="."] {
+button[value="."] {
     grid-area: ponto;    
 }
 
-button[data-value="="] {
+button[value="="] {
     grid-area: igual;    
 }
