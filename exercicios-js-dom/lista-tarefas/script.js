@@ -12,7 +12,6 @@ form.addEventListener("submit", (e) => {
         renderizarTarefa(tarefaTexto);
         form.inTarefa.value = ""
     }
-
 })
 
 function renderizarTarefa(texto) {
@@ -30,3 +29,9 @@ function renderizarTarefa(texto) {
     const tarefaDom = templateHtml.querySelector("li");
     ulTarefas.appendChild(tarefaDom);
 }
+
+ulTarefas.addEventListener("click", (e) => {
+    if (e.target.classList.contains("fa-solid")) {
+        e.target.parentElement.parentElement.remove();
+    }
+})
