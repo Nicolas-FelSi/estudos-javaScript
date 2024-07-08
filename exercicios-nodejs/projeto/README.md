@@ -1,4 +1,5 @@
 Para rodar o projeto:
+- Esteja com mysql ativado;
 - Entre na pasta projeto;
 - Abra o terminal;
 - Digite "npm install", aperte enter;
