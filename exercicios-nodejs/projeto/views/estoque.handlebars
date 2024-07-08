@@ -1,0 +1,47 @@
+<main>
+    <div class="container mt-5">
+        <h1 class="mb-4">Movimentação de Estoque</h1>
+        <form action="/movimentar-estoque" method="post" id="movimentacao-form">
+            <div class="form-row">
+                <div class="form-floating mb-3 col-md-4">
+                    <select class="form-control" id="produtoId" name="produtoId">
+                        {{#if produtos.length}}
+                            {{#each produtos}}
+                                <option value="{{codigo}}">{{nome}}</option>
+                            {{/each}}
+                        {{else}}
+                            <option disabled>Não há produtos cadastrados</option>
+                        {{/if}}
+                    </select>
+                    <label for="produtoId">Produto</label>
+                </div>
+                <div class="form-floating mb-3 col-md-4">
+                    <select class="form-control" id="tipoMovimento" name="tipoMovimento">
+                        <option value="entrada">Entrada</option>
+                        <option value="saida">Saída</option>
+                    </select>
+                    <label for="tipoMovimento">Tipo de Movimento</label>
+                </div>
+                <div class="form-floating mb-3 col-md-4">
+                    <input type="number" class="form-control" id="quantidade" name="quantidade" min="1" required>
+                    <label for="quantidade">Quantidade</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Movimentar</button>
+        </form>
+        <div class="mt-4">
+            <h2>Estoque Atual</h2>
+            <div class="product-list">
+                {{#each produtos}}
+                    <div class="product-item p-3 mb-2 border">
+                        <strong>Código:</strong> {{codigo}} -
+                        <strong>Nome:</strong> {{nome}} -
+                        <strong>Descrição:</strong> {{descricao}} -
+                        <strong>Saldo:</strong> {{saldo_estoque}}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</main>
+

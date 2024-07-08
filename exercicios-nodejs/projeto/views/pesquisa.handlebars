@@ -1,0 +1,56 @@
+<main>
+    <div class="container mt-5">
+        <h1 class="mb-4">Pesquisa de Produtos</h1>
+        <form action='/buscar-produtos' method="get" id="pesquisa-form">
+            <div class="form-row">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="codigo" name="codigo">
+                    <label for="codigo">Código</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nome" name="nome">
+                    <label for="codigo">Nome</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="descricao" name="descricao">
+                    <label for="descricao">Descrição</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-control" id="codigo_grupo" name="codigo_grupo">
+                        {{#if grupos.length}}
+                            {{#each grupos}}
+                                <option value="{{codigo_grupo}}">{{nome}}</option>
+                            {{/each}}
+                        {{else}}
+                            <option disabled>Não há grupos cadastrados</option>
+                        {{/if}}
+                    </select>
+                    <label for="codigo_grupo">Grupo:</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Pesquisar</button>
+            <button type="reset" class="btn btn-secondary">Limpar</button>
+        </form>
+        <div class="product-list mt-4">
+           {{#if filtrosAplicados}}
+                {{#if produtos.length}}
+                    {{#each produtos}}
+                        <div class="product-item p-3 mb-2 border">
+                            <strong>Código:</strong> {{codigo}} -
+                            <strong>Nome:</strong> {{nome}} -
+                            <strong>Descrição:</strong> {{descricao}} 
+                            <strong>(Grupo:</strong> {{codigo_grupo}}, 
+                            <strong>Saldo:</strong> {{saldo_estoque}})
+                        </div>
+                    {{/each}}
+                {{else}}
+                    <p class="text-muted">Nenhum produto encontrado</p>
+                {{/if}}
+            {{/if}}
+        </div>
+    </div>
+</main>
+
+
+
+
